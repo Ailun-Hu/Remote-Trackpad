@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "remote-trackpad",
+    "slug": "remote-trackpad",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "remote-trackpad"
+}
