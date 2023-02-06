@@ -1,0 +1,79 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/hi/Documents/Remote Trackpad/Desktop-Executable/Desktop-Executable.csproj": {}
+  },
+  "projects": {
+    "/Users/hi/Documents/Remote Trackpad/Desktop-Executable/Desktop-Executable.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/hi/Documents/Remote Trackpad/Desktop-Executable/Desktop-Executable.csproj",
+        "projectName": "Desktop-Executable",
+        "projectPath": "/Users/hi/Documents/Remote Trackpad/Desktop-Executable/Desktop-Executable.csproj",
+        "packagesPath": "/Users/hi/.nuget/packages/",
+        "outputPath": "/Users/hi/Documents/Remote Trackpad/Desktop-Executable/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/hi/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "System.Net.WebSockets": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
+            "System.Net.WebSockets.Client": {
+              "target": "Package",
+              "version": "[4.3.2, )"
+            },
+            "Websocket.Client": {
+              "target": "Package",
+              "version": "[4.4.43, )"
+            },
+            "websocket-sharp-Net6.0": {
+              "target": "Package",
+              "version": "[1.0.3.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/x64/sdk/6.0.400/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
