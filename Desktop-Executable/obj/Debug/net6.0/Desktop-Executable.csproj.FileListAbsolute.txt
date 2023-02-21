@@ -19,3 +19,4 @@
 /Users/hi/Documents/Remote Trackpad/Desktop-Executable/bin/Debug/net6.0/System.Reactive.dll
 /Users/hi/Documents/Remote Trackpad/Desktop-Executable/bin/Debug/net6.0/System.Reactive.xml
 /Users/hi/Documents/Remote Trackpad/Desktop-Executable/obj/Debug/net6.0/Desktop-Executable.csproj.CopyComplete
+/Users/hi/Documents/Remote Trackpad/Desktop-Executable/bin/Debug/net6.0/Newtonsoft.Json.dll
