@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/hi/Documents/Remote Trackpad/Desktop-Executable/Desktop-Executable.csproj": {}
+    "c:\\Users\\Ahu74\\Documents\\Remote-Trackpad-1\\Desktop-Executable\\Desktop-Executable.csproj": {}
   },
   "projects": {
-    "/Users/hi/Documents/Remote Trackpad/Desktop-Executable/Desktop-Executable.csproj": {
+    "c:\\Users\\Ahu74\\Documents\\Remote-Trackpad-1\\Desktop-Executable\\Desktop-Executable.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/hi/Documents/Remote Trackpad/Desktop-Executable/Desktop-Executable.csproj",
+        "projectUniqueName": "c:\\Users\\Ahu74\\Documents\\Remote-Trackpad-1\\Desktop-Executable\\Desktop-Executable.csproj",
         "projectName": "Desktop-Executable",
-        "projectPath": "/Users/hi/Documents/Remote Trackpad/Desktop-Executable/Desktop-Executable.csproj",
-        "packagesPath": "/Users/hi/.nuget/packages/",
-        "outputPath": "/Users/hi/Documents/Remote Trackpad/Desktop-Executable/obj/",
+        "projectPath": "c:\\Users\\Ahu74\\Documents\\Remote-Trackpad-1\\Desktop-Executable\\Desktop-Executable.csproj",
+        "packagesPath": "C:\\Users\\Ahu74\\.nuget\\packages\\",
+        "outputPath": "c:\\Users\\Ahu74\\Documents\\Remote-Trackpad-1\\Desktop-Executable\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/hi/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Ahu74\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -41,6 +41,14 @@
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.2, )"
+            },
+            "System.Net.NetworkInformation": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
+            "System.Net.Sockets": {
+              "target": "Package",
+              "version": "[4.3.0, )"
             },
             "System.Net.WebSockets": {
               "target": "Package",
@@ -70,12 +78,30 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.14, 6.0.14]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[6.0.14, 6.0.14]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.14, 6.0.14]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.14, 6.0.14]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/x64/sdk/6.0.400/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     }

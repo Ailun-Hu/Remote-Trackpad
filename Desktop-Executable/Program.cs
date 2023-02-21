@@ -1,12 +1,27 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using System.Net.WebSockets;
+using System.Net.Sockets;
+using System.Net.NetworkInformation;
 
 namespace MoveMouse
 {
     class Program{
 
         static void Main(string[] args){
-            ListenAndMove();  
+        foreach (NetworkInterface netInterface in NetworkInterface.GetAllNetworkInterfaces())
+            {
+                Console.WriteLine("Name: " + netInterface.Name);
+                Console.WriteLine("Description: " + netInterface.Description);
+                Console.WriteLine("Addresses: ");
+                IPInterfaceProperties ipProps = netInterface.GetIPProperties();
+                foreach (UnicastIPAddressInformation addr in ipProps.UnicastAddresses)
+                {
+                Console.WriteLine(" " + addr.Address.ToString());
+                }
+                Console.WriteLine("");
+            }    
+            
+            //ListenAndMove();  
         }
 
         static async void ListenAndMove()
@@ -14,7 +29,7 @@ namespace MoveMouse
             // int x = 0;
             // int y = 0;
             var result = new byte[1024];
-            Uri link = new Uri("ws://localhost:8080");
+            Uri link = new Uri("ws://192.168.1.121:4201");
             using(ClientWebSocket ws = new ClientWebSocket()){
             Console.WriteLine(link.ToString());
 
