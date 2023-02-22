@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     "net6.0": {
+      "ArpLookup/2.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/ArpLookup.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/ArpLookup.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.NETCore.Platforms/1.1.0": {
         "type": "package",
         "compile": {
@@ -30,6 +43,28 @@
         "compile": {
           "ref/netstandard1.3/_._": {
             "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.Win32.SystemEvents/7.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Microsoft.Win32.SystemEvents.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.Win32.SystemEvents.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.dll": {
+            "assetType": "runtime",
+            "rid": "win"
           }
         }
       },
@@ -285,6 +320,31 @@
         "compile": {
           "ref/netstandard1.5/_._": {
             "related": ".xml"
+          }
+        }
+      },
+      "System.Drawing.Common/7.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Win32.SystemEvents": "7.0.0"
+        },
+        "compile": {
+          "lib/net6.0/System.Drawing.Common.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/System.Drawing.Common.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net6.0/System.Drawing.Common.dll": {
+            "assetType": "runtime",
+            "rid": "win"
           }
         }
       },
@@ -1190,6 +1250,28 @@
           }
         }
       },
+      "System.Windows.Extensions/7.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Drawing.Common": "7.0.0"
+        },
+        "compile": {
+          "lib/net6.0/System.Windows.Extensions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/System.Windows.Extensions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net6.0/System.Windows.Extensions.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
       "websocket-sharp-Net6.0/1.0.3.1": {
         "type": "package",
         "dependencies": {
@@ -1222,6 +1304,20 @@
     }
   },
   "libraries": {
+    "ArpLookup/2.0.3": {
+      "sha512": "b5kueDYq0U6+6KcuQoB2+1057Fo/qq6EP3v5jbcNT94+G9o479coiWcFV0f1puYUoAztdYZ5Fl2wT82XxRCz9w==",
+      "type": "package",
+      "path": "arplookup/2.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "arplookup.2.0.3.nupkg.sha512",
+        "arplookup.nuspec",
+        "icon.png",
+        "lib/netstandard2.0/ArpLookup.dll",
+        "lib/netstandard2.0/ArpLookup.xml"
+      ]
+    },
     "Microsoft.NETCore.Platforms/1.1.0": {
       "sha512": "kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
       "type": "package",
@@ -1288,6 +1384,37 @@
         "ref/xamarinmac20/_._",
         "ref/xamarintvos10/_._",
         "ref/xamarinwatchos10/_._"
+      ]
+    },
+    "Microsoft.Win32.SystemEvents/7.0.0": {
+      "sha512": "2nXPrhdAyAzir0gLl8Yy8S5Mnm/uBSQQA7jEsILOS1MTyS7DbmV1NgViMtvV1sfCD1ebITpNwb1NIinKeJgUVQ==",
+      "type": "package",
+      "path": "microsoft.win32.systemevents/7.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/Microsoft.Win32.SystemEvents.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net6.0/_._",
+        "buildTransitive/netcoreapp2.0/Microsoft.Win32.SystemEvents.targets",
+        "lib/net462/Microsoft.Win32.SystemEvents.dll",
+        "lib/net462/Microsoft.Win32.SystemEvents.xml",
+        "lib/net6.0/Microsoft.Win32.SystemEvents.dll",
+        "lib/net6.0/Microsoft.Win32.SystemEvents.xml",
+        "lib/net7.0/Microsoft.Win32.SystemEvents.dll",
+        "lib/net7.0/Microsoft.Win32.SystemEvents.xml",
+        "lib/netstandard2.0/Microsoft.Win32.SystemEvents.dll",
+        "lib/netstandard2.0/Microsoft.Win32.SystemEvents.xml",
+        "microsoft.win32.systemevents.7.0.0.nupkg.sha512",
+        "microsoft.win32.systemevents.nuspec",
+        "runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.dll",
+        "runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.xml",
+        "runtimes/win/lib/net7.0/Microsoft.Win32.SystemEvents.dll",
+        "runtimes/win/lib/net7.0/Microsoft.Win32.SystemEvents.xml",
+        "useSharedDesignerContext.txt"
       ]
     },
     "Newtonsoft.Json/13.0.2": {
@@ -1851,6 +1978,43 @@
         "ref/xamarinwatchos10/_._",
         "system.diagnostics.tracing.4.3.0.nupkg.sha512",
         "system.diagnostics.tracing.nuspec"
+      ]
+    },
+    "System.Drawing.Common/7.0.0": {
+      "sha512": "KIX+oBU38pxkKPxvLcLfIkOV5Ien8ReN78wro7OF5/erwcmortzeFx+iBswlh2Vz6gVne0khocQudGwaO1Ey6A==",
+      "type": "package",
+      "path": "system.drawing.common/7.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/System.Drawing.Common.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net6.0/_._",
+        "buildTransitive/netcoreapp2.0/System.Drawing.Common.targets",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net462/System.Drawing.Common.dll",
+        "lib/net462/System.Drawing.Common.xml",
+        "lib/net6.0/System.Drawing.Common.dll",
+        "lib/net6.0/System.Drawing.Common.xml",
+        "lib/net7.0/System.Drawing.Common.dll",
+        "lib/net7.0/System.Drawing.Common.xml",
+        "lib/netstandard2.0/System.Drawing.Common.dll",
+        "lib/netstandard2.0/System.Drawing.Common.xml",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "runtimes/win/lib/net6.0/System.Drawing.Common.dll",
+        "runtimes/win/lib/net6.0/System.Drawing.Common.xml",
+        "runtimes/win/lib/net7.0/System.Drawing.Common.dll",
+        "runtimes/win/lib/net7.0/System.Drawing.Common.xml",
+        "system.drawing.common.7.0.0.nupkg.sha512",
+        "system.drawing.common.nuspec",
+        "useSharedDesignerContext.txt"
       ]
     },
     "System.Globalization/4.3.0": {
@@ -4029,6 +4193,29 @@
         "system.threading.timer.nuspec"
       ]
     },
+    "System.Windows.Extensions/7.0.0": {
+      "sha512": "bR4qdCmssMMbo9Fatci49An5B1UaVJZHKNq70PRgzoLYIlitb8Tj7ns/Xt5Pz1CkERiTjcVBDU2y1AVrPBYkaw==",
+      "type": "package",
+      "path": "system.windows.extensions/7.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net6.0/System.Windows.Extensions.dll",
+        "lib/net6.0/System.Windows.Extensions.xml",
+        "lib/net7.0/System.Windows.Extensions.dll",
+        "lib/net7.0/System.Windows.Extensions.xml",
+        "runtimes/win/lib/net6.0/System.Windows.Extensions.dll",
+        "runtimes/win/lib/net6.0/System.Windows.Extensions.xml",
+        "runtimes/win/lib/net7.0/System.Windows.Extensions.dll",
+        "runtimes/win/lib/net7.0/System.Windows.Extensions.xml",
+        "system.windows.extensions.7.0.0.nupkg.sha512",
+        "system.windows.extensions.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
     "websocket-sharp-Net6.0/1.0.3.1": {
       "sha512": "rAEqfcZciEz68+SxMIEMvDppx7V0iuQrvcj6+JKL6T5B3LvyiL7JCTSmQcDakoDZVW5L9aim/a644tAyPh9wnw==",
       "type": "package",
@@ -4067,11 +4254,13 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "ArpLookup >= 2.0.3",
       "Newtonsoft.Json >= 13.0.2",
       "System.Net.NetworkInformation >= 4.3.0",
       "System.Net.Sockets >= 4.3.0",
       "System.Net.WebSockets >= 4.3.0",
       "System.Net.WebSockets.Client >= 4.3.2",
+      "System.Windows.Extensions >= 7.0.0",
       "Websocket.Client >= 4.4.43",
       "websocket-sharp-Net6.0 >= 1.0.3.1"
     ]
@@ -4082,11 +4271,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\Ahu74\\Documents\\Remote-Trackpad-1\\Desktop-Executable\\Desktop-Executable.csproj",
+      "projectUniqueName": "c:\\Users\\Ahu74\\Documents\\Remote-Trackpad\\Desktop-Executable\\Desktop-Executable.csproj",
       "projectName": "Desktop-Executable",
-      "projectPath": "c:\\Users\\Ahu74\\Documents\\Remote-Trackpad-1\\Desktop-Executable\\Desktop-Executable.csproj",
+      "projectPath": "c:\\Users\\Ahu74\\Documents\\Remote-Trackpad\\Desktop-Executable\\Desktop-Executable.csproj",
       "packagesPath": "C:\\Users\\Ahu74\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\Ahu74\\Documents\\Remote-Trackpad-1\\Desktop-Executable\\obj\\",
+      "outputPath": "c:\\Users\\Ahu74\\Documents\\Remote-Trackpad\\Desktop-Executable\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Ahu74\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -4113,6 +4302,10 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
+          "ArpLookup": {
+            "target": "Package",
+            "version": "[2.0.3, )"
+          },
           "Newtonsoft.Json": {
             "target": "Package",
             "version": "[13.0.2, )"
@@ -4132,6 +4325,10 @@
           "System.Net.WebSockets.Client": {
             "target": "Package",
             "version": "[4.3.2, )"
+          },
+          "System.Windows.Extensions": {
+            "target": "Package",
+            "version": "[7.0.0, )"
           },
           "Websocket.Client": {
             "target": "Package",

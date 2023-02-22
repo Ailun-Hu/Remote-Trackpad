@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\Ahu74\\Documents\\Remote-Trackpad-1\\Desktop-Executable\\Desktop-Executable.csproj": {}
+    "c:\\Users\\Ahu74\\Documents\\Remote-Trackpad\\Desktop-Executable\\Desktop-Executable.csproj": {}
   },
   "projects": {
-    "c:\\Users\\Ahu74\\Documents\\Remote-Trackpad-1\\Desktop-Executable\\Desktop-Executable.csproj": {
+    "c:\\Users\\Ahu74\\Documents\\Remote-Trackpad\\Desktop-Executable\\Desktop-Executable.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Ahu74\\Documents\\Remote-Trackpad-1\\Desktop-Executable\\Desktop-Executable.csproj",
+        "projectUniqueName": "c:\\Users\\Ahu74\\Documents\\Remote-Trackpad\\Desktop-Executable\\Desktop-Executable.csproj",
         "projectName": "Desktop-Executable",
-        "projectPath": "c:\\Users\\Ahu74\\Documents\\Remote-Trackpad-1\\Desktop-Executable\\Desktop-Executable.csproj",
+        "projectPath": "c:\\Users\\Ahu74\\Documents\\Remote-Trackpad\\Desktop-Executable\\Desktop-Executable.csproj",
         "packagesPath": "C:\\Users\\Ahu74\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Ahu74\\Documents\\Remote-Trackpad-1\\Desktop-Executable\\obj\\",
+        "outputPath": "c:\\Users\\Ahu74\\Documents\\Remote-Trackpad\\Desktop-Executable\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Ahu74\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -38,6 +38,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "ArpLookup": {
+              "target": "Package",
+              "version": "[2.0.3, )"
+            },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.2, )"
@@ -57,6 +61,10 @@
             "System.Net.WebSockets.Client": {
               "target": "Package",
               "version": "[4.3.2, )"
+            },
+            "System.Windows.Extensions": {
+              "target": "Package",
+              "version": "[7.0.0, )"
             },
             "Websocket.Client": {
               "target": "Package",
