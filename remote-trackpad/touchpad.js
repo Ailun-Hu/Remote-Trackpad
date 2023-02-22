@@ -23,8 +23,9 @@ function Touchpad(props) {
        onStartShouldSetResponder ={() => true}
        onResponderMove = {(event) => {
         let isFirstChange = (res.xChange == 0 && res.yChange == 0 ? true : false);
-        res.xChange = event.nativeEvent.locationX - touch.x._value;
-        res.yChange = event.nativeEvent.locationY - touch.y._value;
+        res.xChange = Math.round(event.nativeEvent.locationX - touch.x._value);
+        res.yChange = Math.round(event.nativeEvent.locationY - touch.y._value);
+        
         if(!isFirstChange)
           ws.send(JSON.stringify(res));
         touch.setValue({
