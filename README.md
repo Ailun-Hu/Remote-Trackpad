@@ -7,4 +7,4 @@ The Desktop Executable searches through the entire lan network and checks to see
 
 ##Things to Note
   - Desktop exe only works on windows machine. 
-  - react app works on any device.
+  - There may be some networking firewalls that could prevent the connection from going through. 
