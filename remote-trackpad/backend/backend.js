@@ -17,7 +17,6 @@ server.on('connection', socket => {
         server.clients.forEach((client) => {
             if(client !== socket && client.readyState === WebSocket.OPEN){
                 client.send(res.xChange + " " + res.yChange + " ");
-                
             }
         })
     })

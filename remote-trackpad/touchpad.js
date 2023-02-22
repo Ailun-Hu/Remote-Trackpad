@@ -1,4 +1,4 @@
-import React, { Component , useRef} from "react";
+import React, { Component , useRef, useState} from "react";
 import {  View , Animated, useWindowDimensions, SafeAreaView, StatusBar, Text, Button} from "react-native";
 
 const CURSOR_SIDE_SIZE = 20;
@@ -6,7 +6,11 @@ const CURSOR_HALF_SIDE_SIZE = CURSOR_SIDE_SIZE / 2;
 
 function Touchpad(props) {
   //WebSocket Server
-  var ws = React.useRef(new WebSocket('ws://localhost:4201')).current;
+  var ws1 = React.useRef(new WebSocket('ws://localhost:4201')).current;
+  var ws2;
+  var ws = ws1;
+
+  
 
 
   //Movement Controls
@@ -16,6 +20,9 @@ function Touchpad(props) {
     xChange: 0,
     yChange: 0
   }
+  //True = use Lan, False = Online
+  
+  const [ButtonOption, setButtonOption] = useState(true);
 
     return( 
       
@@ -48,7 +55,10 @@ function Touchpad(props) {
           }).start();
         }}
        >
-        <View style={{flexDirection: "row", alignItems: "center", justifyContent: "center" , backgroundColor:"yellow", marginTop: "14%"}}><Button style={{ flex: 1}} color="black" title="WORAKJJKHSJA"/><Button style={{flex: 1}} title="jsdahkjdhasjhdjkhs"/></View>
+        <View style={{flexDirection: "row", alignItems: "center", justifyContent: "center", marginTop: "14%"}}>
+          <Button style={{ flex: 1}} color="black" title={ButtonOption ? "Switch To Online" : "Switch To Local"} onPress={() => {setButtonOption(!ButtonOption); 
+          ws = ButtonOption ?  ws1 : ws2}}/>
+          </View>
         <Animated.View style={{
           position: "absolute",
           left: Animated.subtract(touch.x, CURSOR_HALF_SIDE_SIZE),
