@@ -34,3 +34,4 @@ C:\Users\Ahu74\Documents\Remote-Trackpad\DesktopMouseMover\DesktopMouseMover\obj
 C:\Users\Ahu74\Documents\Remote-Trackpad\DesktopMouseMover\DesktopMouseMover\obj\Debug\DesktopMouseMover.csproj.CopyComplete
 C:\Users\Ahu74\Documents\Remote-Trackpad\DesktopMouseMover\DesktopMouseMover\obj\Debug\DesktopMouseMover.exe
 C:\Users\Ahu74\Documents\Remote-Trackpad\DesktopMouseMover\DesktopMouseMover\obj\Debug\DesktopMouseMover.pdb
+C:\Users\Ahu74\Documents\Remote-Trackpad\DesktopMouseMover\DesktopMouseMover\obj\Debug\DesktopMouseMover.csproj.SuggestedBindingRedirects.cache

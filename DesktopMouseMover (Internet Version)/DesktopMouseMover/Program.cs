@@ -4,6 +4,10 @@ using System.Net.WebSockets;
 using System.Threading;
 using System.Drawing;
 using System.Windows.Forms;
+using Newtonsoft.Json;
+using System.Text;
+
+
 
 namespace DesktopMouseMover
 {
@@ -11,62 +15,26 @@ namespace DesktopMouseMover
     {
         static void Main(string[] args)
         {
-            
-            //Loops though all possible LAN IP addresses and checks server exist on certain port
-             while(true){
-                 string ipbase = "192.168.1.";
-                 for(int i = 1; i < 255; i++){
-                     string ip = ipbase + i.ToString();
-                    bool serverFound = pingCheck(ip, 100, 4201);
-                     if(serverFound){
-                         ListenAndMove(ip);
-                     }
-                 } 
-            }         
-
-
-        }
-        static bool pingCheck(string host, int timeout, int port)
-        {
-            System.Net.NetworkInformation.Ping ping = new System.Net.NetworkInformation.Ping();
-            System.Net.NetworkInformation.PingReply pingReply;
-            try
-            {
-                pingReply = ping.Send(host, timeout);
-                if (pingReply != null && pingReply.Status == System.Net.NetworkInformation.IPStatus.Success)
-                    using (TcpClient tcpClient = new TcpClient())
-                    {
-                        Console.WriteLine(host);
-                        try
-                        {
-                            tcpClient.Connect(host, port);
-                            return true;
-                        }
-                        catch
-                        {
-                            return false;
-                        }
-                    }
-            }
-            catch
-            {
-                return false;
-            }
-            return false;
+            Console.WriteLine("hello");
+            ListenAndMove("wss://1vrvtxidx1.execute-api.us-east-1.amazonaws.com/production");
         }
 
-        static void ListenAndMove(string ip)
+
+        static void ListenAndMove(string websocket)
         {
             //To Store Mouse Positions in Buffer
             var result = new byte[1024];
 
-            string url = "ws://" + ip + ":4201";
-            Uri link = new Uri(url);
+            Uri link = new Uri(websocket);
             using (ClientWebSocket ws = new ClientWebSocket())
             {
                 try
                 {
                      ws.ConnectAsync(link, CancellationToken.None).Wait();
+                    var data = new { action = "SendData" };
+                    string topass = JsonConvert.SerializeObject(data);
+                    ArraySegment<Byte> RecieverInfo = new ArraySegment<byte>(Encoding.ASCII.GetBytes(topass));
+                    ws.SendAsync(RecieverInfo, WebSocketMessageType.Text, true, CancellationToken.None);
                 }
                 catch{
                     return;
@@ -80,8 +48,8 @@ namespace DesktopMouseMover
                     var list = data.Split(' ');
                     Console.WriteLine(list[0] + ' ' + list[1]);
                     var cursor = new Cursor(Cursor.Current.Handle);
-                    int x = Cursor.Position.X + Int32.Parse(list[0]);
-                    int y = Cursor.Position.Y + Int32.Parse(list[1]);
+                    int x = Cursor.Position.X + Int32.Parse(list[0])*10;
+                    int y = Cursor.Position.Y + Int32.Parse(list[1])*10;
 
                     Cursor.Position = new Point(x, y);
                     
